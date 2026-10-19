@@ -37,8 +37,8 @@ For each formula `f`, the split is `int(sha256("TRISTAN_R18_20261019|"+f)[:12],1
 Download the original source archive from UCI; the data are **not republished** here.
 
 ```bash
-python r18_pareto.py --archive superconductivity.zip --preregister R18_PREREGISTER.json --output repro
-python r18_predictive.py --archive superconductivity.zip --output repro
+python research/r18/r18_pareto.py --archive superconductivity.zip --preregister research/r18/R18_PREREGISTER.json --output repro
+python research/r18/r18_predictive.py --archive superconductivity.zip --output repro
 ```
 
 Python 3 and NumPy are required for the predictive script; the Pareto script uses only Python's standard library.
