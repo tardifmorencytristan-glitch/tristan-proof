@@ -1,0 +1,52 @@
+{
+  "schema": "omega.tristan.r18.preregistered-multifront",
+  "created_utc": "2026-10-19",
+  "source": {
+    "repository": "UCI Superconductivty Data",
+    "url": "https://archive.ics.uci.edu/dataset/464/superconductivty+data",
+    "doi": "10.24432/C53P47",
+    "paper_doi": "10.1016/j.commatsci.2018.07.052",
+    "license": "CC BY 4.0",
+    "dataset_sha256": "87f4490d73390ff94ee01dbf0d7d32abc80b22f2c803d471765cfc46a9f6371e"
+  },
+  "objectives": {
+    "critical_temp": "measured Tc, maximize or reverse exploratory minimize; NOT objective manufacturing efficiency",
+    "number_of_elements": "minimize elemental count; only compositional complexity proxy",
+    "mass": "minimize mean_atomic_mass or wtd_mean_atomic_mass; NOT price or manufacturability"
+  },
+  "tensor_axes": {
+    "subset": [
+      "all",
+      "number_of_elements<=4",
+      "number_of_elements>=5"
+    ],
+    "direction": [
+      "Tc_max",
+      "Tc_min_exploratory"
+    ],
+    "mass_definition": [
+      "mean_atomic_mass",
+      "wtd_mean_atomic_mass"
+    ],
+    "objective_sets": [
+      "temp_elements",
+      "temp_mass",
+      "elements_mass",
+      "all_three"
+    ]
+  },
+  "controls": [
+    "positive affine order invariance",
+    "64 seeded permutation null tests of Tc vs composition for full 3-objective high Tc front",
+    "independent full-front dominance certificate",
+    "no scientific claim without independent new predictions"
+  ],
+  "decision_rules": [
+    "NO_ACTION",
+    "KEEP_SEPARATE",
+    "EXPLORATORY_ONLY",
+    "PUBLISH_SANITIZED_REPRODUCIBLE"
+  ],
+  "publication": "raw private corpus and passwords never publish; derive only aggregate valid findings plus attribution after independent checks",
+  "epistemic_status": "PREREGISTERED_NOT_VALIDATED"
+}
